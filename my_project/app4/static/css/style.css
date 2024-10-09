@@ -1,0 +1,114 @@
+/* Estilo general del fondo */
+body {
+  background-color: #f4f4f4; /* Fondo gris claro */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+}
+
+/* Encabezado */
+h1 {
+  color: #00274d; /* Azul oscuro estilo universitario */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Formulario */
+#task-form {
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #e0e0e0; /* Borde suave */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+#task_input, #task_icon {
+  border: 2px solid #00274d; /* Azul oscuro */
+}
+
+#task_input:focus, #task_icon:focus {
+  border-color: #2e8b57; /* Verde */
+  box-shadow: 0 0 5px #2e8b57;
+}
+
+/* Botones del formulario */
+button[type="submit"] {
+  background-color: #2e8b57; /* Verde */
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #218d5f; /* Hover: Verde más oscuro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra al hacer hover */
+}
+
+/* Columnas de tareas */
+h3 {
+  color: #00274d; /* Título en azul oscuro */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.list-group {
+  min-height: 200px;
+  border-radius: 8px;
+}
+
+/* Diferenciar visualmente las secciones */
+#task-pending {
+  background-color: #ffe8e8; /* Fondo rojo claro para pendientes */
+}
+
+#task-today {
+  background-color: #e8f7ff; /* Fondo azul claro para hoy */
+}
+
+#task-completed {
+  background-color: #e6ffe8; /* Fondo verde claro para completadas */
+}
+
+/* Botones de las tareas */
+.task-schedule {
+  background-color: #2e8b57; /* Botón verde para agendar */
+  border: none;
+  color: white;
+}
+
+.task-schedule:hover {
+  background-color: #218d5f;
+}
+
+.task-delete {
+  background-color: #dc3545; /* Rojo para eliminar */
+  border: none;
+  color: white;
+}
+
+.task-delete:hover {
+  background-color: #c82333;
+}
+
+/* Botón de completar tarea */
+.task-complete {
+  background-color: #ffc107; /* Amarillo para marcar como terminada */
+  border: none;
+  color: white;
+}
+
+.task-complete:hover {
+  background-color: #e0a800;
+}
+
+/* Aumentar el espaciado entre elementos de la lista */
+.list-group-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+/* Efecto hover en los elementos de la lista */
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}

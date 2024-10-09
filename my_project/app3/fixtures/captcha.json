@@ -1,0 +1,92 @@
+[
+    {
+      "model": "app3.captcha",
+      "pk": 1,
+      "fields": {
+        "category": "transport",
+        "image": "img/captcha1/structure.png",
+        "solution": true
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 2,
+      "fields": {
+        "category": "transport",
+        "image": "img/captcha1/helicopter.png",
+        "solution": false
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 3,
+      "fields": {
+        "category": "transport",
+        "image": "img/captcha1/motorcycle.png",
+        "solution": false
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 4,
+      "fields": {
+        "category": "transport",
+        "image": "img/captcha1/parachute.png",
+        "solution": false
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 5,
+      "fields": {
+        "category": "transport",
+        "image": "img/captcha1/plane.png",
+        "solution": false
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 6,
+      "fields": {
+        "category": "payment",
+        "image": "img/captcha2/barcode.png",
+        "solution": true
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 7,
+      "fields": {
+        "category": "payment",
+        "image": "img/captcha2/coin.png",
+        "solution": false
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 8,
+      "fields": {
+        "category": "payment",
+        "image": "img/captcha2/coin1.png",
+        "solution": false
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 9,
+      "fields": {
+        "category": "payment",
+        "image": "img/captcha2/note.png",
+        "solution": false
+      }
+    },
+    {
+      "model": "app3.captcha",
+      "pk": 10,
+      "fields": {
+        "category": "payment",
+        "image": "img/captcha2/wallet.png",
+        "solution": false
+      }
+    }
+  ]

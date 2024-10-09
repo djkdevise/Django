@@ -1,0 +1,142 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>App con Bootstrap</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Enlace a -awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Incluye jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Enlace al archivo JS -->
+    <script src="{% static 'js/scriptsbs.js' %}"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <div class="container py-4">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col text-center">
+            <h1>{{ titulo1 }}</h1>
+            <i class="fas fa-star fa-3x mb-3" style="color: gold;"></i>
+        </div>
+    </div>
+    
+    <div id="tareasCarrusel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for grupo in grouped_tareas %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <div class="row">
+                    {% for tarea in grupo %}
+                    <div class="col text-center">
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="{{ tarea.icono }} fa-3x mb-3"></i>
+                                <h5 class="card-title">{{ tarea.nombre }}</h5>
+                                <p class="card-text">{{ tarea.descripcion }}</p>
+                                <button class="btn btn-success btn-sm task-complete-btn">Realizada</button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#tareasCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#tareasCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    
+    
+      <h1 class="text-center mb-4 mt-4">{{ titulo2 }} 📝</h1>
+    
+  <!-- Formulario para agregar tareas -->
+  <form id="task-form" class="p-4 bg-light rounded shadow-sm">
+    <div class="row">
+      <div class="col-md-6">
+        <input type="text" id="task_input" class="form-control" placeholder="Nueva tarea..." required>
+      </div>
+      <div class="col-md-4">
+        <select id="task_icon" class="form-select">
+          <option value="fa-house-user">🏡 Casa</option>
+          <option value="fa-briefcase">💼 Oficina</option>
+          <option value="fa-book">📚 Estudio</option>
+          <option value="fa-tools">🛠️ Mantenimiento</option>
+          <option value="fa-user">🧘‍♂️Personal</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Agregar Tarea</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Listas de tareas -->
+  <div class="row mt-4">
+    <div class="col-md-4 text-center">
+        <div class="p-3 bg-success text-white rounded shadow">
+          <h3 class="text-center">📝 Tareas Pendientes</h3>
+          <ul id="task-pending" class="list-group bg-white p-3 shadow-sm rounded"></ul>
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="p-3 bg-warning text-dark rounded shadow">
+        <h3 class="text-center">📆 Hoy</h3>
+        <ul id="task-today" class="list-group bg-white p-3 shadow-sm rounded"></ul>
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="p-3 bg-info text-white rounded shadow">
+        <h3 class="text-center">🚀 Completadas</h3>
+        <ul id="task-completed" class="list-group bg-white p-3 shadow-sm rounded"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>

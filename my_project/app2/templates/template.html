@@ -1,0 +1,89 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Django</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"/>
+            <link rel="shortcut icon" type="image/png" href="{$ static 'img/favicon.ico'}"
+            <title> Mi primera pagina</title>
+
+            <style>
+                .card {
+                  width: 300px; /* Adjust width as needed */
+                  margin: 50px auto; /* Center the card */
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  overflow: hidden; /* Hide overflowing content */
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+                }
+                
+                .card img {
+                  width: 100%; /* Make image responsive */
+                  height: auto;
+                  transition: transform 0.3s ease; /* Add smooth transition for hover */
+                }
+                
+                .card img:hover {
+                  transform: scale(1.1); /* Zoom in on hover */
+                }
+                
+                .card-body {
+                  padding: 10px;
+                }
+                
+                .card-body p {
+                  margin: 0;
+                }
+                </style>
+        
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main>
+        <h1>Pagina con django</h1>
+        <p>Este pagina esta siendo creada por los campistas de Talento Tech</p>
+        <p>{{name_aplication}}</p>
+        <p>Esta página se creó: {{fecha_creacion}}</p>
+        <p>Version de la aplicación: {{version}}</p>
+        <h3>Tecnologías usadas en esta página:</h3>
+        <ul>
+        {% for tec in tecnologias %}
+        <li>{{tec}}</li>
+        {% endfor %}
+        </ul>
+
+        <img src="{% static 'img/logoPy.png' %}" alt="Descripción de la imagen"> 
+
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

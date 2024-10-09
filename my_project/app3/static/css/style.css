@@ -1,0 +1,44 @@
+/* Asegura que las imágenes estén en una fila */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;  /* Distribuye uniformemente */
+  }
+  
+  li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Estilo para las imágenes del captcha */
+  li img {
+    width: 28%;  /* Cada imagen ocupa aproximadamente el 28% del ancho */
+    transition: transform 0.3s ease;  /* Efecto suave al hacer hover */
+    cursor: pointer;  /* El cursor cambia cuando pasa sobre la imagen */
+  }
+  
+  li img:hover {
+    transform: scale(1.05);  /* Aumenta ligeramente el tamaño al hacer hover */
+  }
+  
+  /* Borde para la imagen seleccionada */
+  li.selected img {
+    border: 3px solid #4CAF50;  /* Borde verde cuando está seleccionada */
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.7);  /* Añade un pequeño efecto de sombra */
+  }
+  
+  /* Mensaje de éxito o error */
+  #message {
+    margin-top: 15px;
+    font-size: 1.2em;
+    display: none;  /* Se oculta inicialmente */
+  }
+  
+  .success {
+    color: green;
+  }
+  
+  .error {
+    color: red;
+  }
