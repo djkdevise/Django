@@ -19,6 +19,7 @@ media/
 staticfiles/
 .env
 .envs/
+envs/
 *.local
 
 # Editor settings
